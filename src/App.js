@@ -7,10 +7,11 @@ class App extends React.Component {
     count: 0
   };
   add = () => {
-    console.log("add");
+    /*this.state.count=1;은 안됨. 직접적으로 state를 변경하는건 안됨. 매번 "새로 설정"한다는 느낌으로 아래와같이 ㄱ */
+    this.setState(current => ({ count: current.count + 1 }));
   };
   minus = () => {
-    console.log("minus");
+    this.setState(current => ({ count: current.count - 1 }));
   };
   render() {
     return (
