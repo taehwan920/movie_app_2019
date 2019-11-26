@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from "axios";
-import Movie from "./Movie"
-import "./App.css"
+import Movie from "./Movie";
+import "./App.css";
 
 
 class App extends React.Component {
@@ -14,7 +14,7 @@ class App extends React.Component {
       data: {
         data: { movies }
       }
-    } = await axios.get("https://yts-proxy.now.sh/list_movies.json")
+    } = await axios.get("https://yts-proxy.now.sh/list_movies.json");
     this.setState({ movies, isLoading: false });
     /* data.data.movies = {data: {data :{movies}}} */
   };
